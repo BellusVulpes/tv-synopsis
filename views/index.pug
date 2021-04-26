@@ -1,0 +1,17 @@
+html 
+  include partials/head.pug
+  body 
+    h1 Kim's Convenience
+    h2 Developed By:
+        ul
+          for dev in showData.developedBy
+              li= dev
+    h2 Starring:
+       ul
+          for star in showData.starring
+              li= star
+    h2 Seasons:
+       ul
+          for season in showData.seasons
+              li
+                a(href=`/season/${season.number}`)= 'Season' + ' ' + season.number
