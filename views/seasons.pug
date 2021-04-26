@@ -1,0 +1,17 @@
+html
+  include partials/head.pug
+  body
+    h1= 'Season' + ' ' + season.number
+  table(id="Season")
+    tr
+      td No.
+      td Title 
+      td Director
+
+    for episode in season.episodes
+      tr
+        td(class="number")= episode.number
+        td(class="title")= episode.title
+        td(class="director")= episode.director
+      th
+        div= episode.synopsis
